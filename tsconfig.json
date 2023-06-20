@@ -22,9 +22,12 @@
     "baseUrl": "src",
     "paths": {
       "@/*": ["*"],
-      "@theme": ["theme"],
+      "@components/*": ["components/*"],
+      "@constants/*": ["constants/*"],
+      "@hooks/*": ["hooks/*"],
       "@pages/*": ["pages/*"],
-      "@components/*": ["components/*"]
+      "@types/*": ["types/*"],
+      "@utils/*": ["utils/*"]
     }
   },
   "include": ["src"],
