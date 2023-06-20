@@ -95,13 +95,13 @@ window.scrollTo({
   };
   ```
 
-<img src="https://github.com/brother1-4752/marvel-characters-client/assets/60454376/772de028-60e4-42ba-8f7f-facbcd2c0ccd">
+<video src="https://github.com/brother1-4752/nemoflix/assets/60454376/a8608c16-4270-4cd1-9ee0-fae64e5430e3"></video>
 
 # Loading Spinner
 
 [Pure CSS Loader - Optimized Spinners for Web · Loading.io](https://loading.io/css/)
 
-<img src="https://github.com/brother1-4752/marvel-characters-client/assets/60454376/a85b5c8d-a74f-4c99-b396-68043edc36d4" />
+![로딩 표시](https://github.com/brother1-4752/nemoflix/assets/60454376/6f207130-ab92-4791-b65d-1b1561736c86)
 
 # Pagination
 
@@ -168,12 +168,12 @@ const CategoryLayout = ({ variant = "popular", ...rest }: Props) => {
 
 </aside>
 
-<img src="https://github.com/brother1-4752/marvel-characters-client/assets/60454376/1f749f24-9001-4fae-9426-0b36433836c4">
+![페이지네이션 (2)](https://github.com/brother1-4752/nemoflix/assets/60454376/1ffec50e-f7ac-4e74-89e8-0ca2adbd875c)
 
 # 디테일 화면 구현 및 닫기 기능
 
-<img src="https://github.com/brother1-4752/marvel-characters-client/assets/60454376/a0ad538f-1481-46e2-82aa-f4e16c323c02">
+<video src="https://github.com/brother1-4752/nemoflix/assets/60454376/11f3c213-656b-402b-b7c6-09f2d23497fb"></video>
 
 # 랜덤 메인포스터 생성
 
-<img src="https://github.com/brother1-4752/marvel-characters-client/assets/60454376/5216c3d4-42fb-4836-b8e8-9361ceacad0b">
+<video src="https://github.com/brother1-4752/nemoflix/assets/60454376/15599014-69e1-4983-8a70-45b4b8bb6a5a"></video>
