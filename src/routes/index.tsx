@@ -1,12 +1,15 @@
 import { createBrowserRouter } from "react-router-dom";
+import type { LoaderFunction } from "react-router-dom";
 
-import Authorization from "@/components/templates/Authorization/Authorization";
-import { Home, Login } from "@/pages";
+// import Authorization from "@/components/templates/Authorization/Authorization";
+import { Home, Login } from "@/components/pages";
+import DetailModal from "@/components/pages/detail/DetailModal";
 
 interface RouterBase {
   path: string;
   label: string;
   element: React.ReactNode;
+  loader?: LoaderFunction;
 }
 
 interface UserAccessibleRouterElement extends RouterBase {
@@ -26,7 +29,15 @@ const routerData: RouterElement[] = [
     path: "/",
     label: "Home",
     element: <Home />,
-    withAuth: true, //logged로 고정
+    withAuth: false,
+    children: [
+      {
+        path: "movie/:movieId",
+        label: "Detail",
+        element: <DetailModal />,
+        withAuth: false,
+      },
+    ],
   },
   {
     path: "/login",
@@ -36,17 +47,19 @@ const routerData: RouterElement[] = [
   },
 ];
 
-const router = createBrowserRouter(
-  routerData.map((router) => {
-    return {
-      path: router.path,
-      element: (
-        <Authorization isLogged={"withAuth" in router && router.withAuth}>
-          {router.element}
-        </Authorization>
-      ),
-    };
-  })
-);
+const router = createBrowserRouter(routerData);
+
+// const router = createBrowserRouter(
+//   routerData.map((router) => {
+//     return {
+//       path: router.path,
+//       element: (
+//         <Authorization isLogged={"withAuth" in router && router.withAuth}>
+//           {router.element}
+//         </Authorization>
+//       ),
+//     };
+//   })
+// );
 
 export default router;
