@@ -4,6 +4,8 @@ import { Props } from "./Paragraph";
 
 export const StyledParagraph = styled.p<Props>`
   font-size: ${({ variant }) => getFontSize(variant)};
+  color: white;
+  line-height: 24px;
 `;
 
 const getFontSize = (variant?: string) => {

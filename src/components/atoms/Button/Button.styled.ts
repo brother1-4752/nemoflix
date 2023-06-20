@@ -10,40 +10,39 @@ const BUTTON_COLOR = {
     hoverColor: "#ff0558",
   },
   SIDEBAR_CATEGORY: {
-    textColor: "#f2f0f0",
-    bgColor: "#f2f0f0",
-    hoverColor: "rgba(15,15,15,0.1)",
+    textColor: "#ffffff",
+    bgColor: "#ffffff",
+    hoverColor: "#ff0558",
     focusColor: "#ff0558",
   },
   DETAIL_GENRE: {
     textColor: "#FFFFFF",
-    bgColor: "#ff0558", //핑크
-    hoverColor: "#0f0f0f",
+    bgColor: "#ff0558",
+    hoverColor: "#0F0F0F",
   },
   EXIT: {
-    textColor: "#FFFFFF", //화이트
-    bgColor: "#2b2b2b", //살짝 옅은 블랙
-    hoverColor: "#0f0f0f", //찐블랙
+    textColor: "#FFFFFF",
+    bgColor: "none",
+    hoverColor: "#0f0f0f",
   },
 };
 
 export const StyledButton = styled.button<Props>`
+  width: fit-content;
   padding: ${({ variant }) => getButtonSize(variant)?.padding};
   border-radius: ${({ variant }) => getButtonSize(variant)?.borderRadius};
+  border: none;
+  cursor: pointer;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  //TODO: border none과 아래 코드는 무슨 차이?
-  border: none;
-  /* border:0;
-    outline: none; */
-  cursor: pointer;
-
   background-color: ${({ variant }) =>
     BUTTON_COLOR[variant || "LOGIN"].bgColor};
   color: ${({ variant }) => BUTTON_COLOR[variant || "LOGIN"].textColor};
+  font-family: inherit;
+  font-size: ${({ variant }) => getButtonSize(variant)?.fontSize};
 
   &:hover {
     background-color: ${({ variant }) =>
@@ -60,8 +59,9 @@ const getButtonSize = (variant?: string) => {
       };
     case "NEXT_CATEGORY":
       return {
-        padding: "12px",
+        padding: "1em",
         borderRadius: "50%",
+        fontSize: "30px",
       };
     case "SIDEBAR_CATEGORY":
       return {
@@ -76,7 +76,7 @@ const getButtonSize = (variant?: string) => {
     case "EXIT":
       return {
         padding: "10px",
-        borderRadius: "10px",
+        borderRadius: "50%",
       };
   }
 };

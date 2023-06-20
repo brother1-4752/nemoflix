@@ -5,6 +5,8 @@ export const StyledTypography = styled.h1<Props>`
   text-align: ${({ textAlign }) => textAlign};
   font-size: ${({ level }) => getFontSize(level)};
   color: ${({ color }) => color};
+
+  cursor: pointer;
 `;
 
 const getFontSize = (level?: number) => {
@@ -14,6 +16,6 @@ const getFontSize = (level?: number) => {
     case 2:
       return "1.25em";
     case 3:
-      return "1.5em";
+      return "1.8em";
   }
 };
