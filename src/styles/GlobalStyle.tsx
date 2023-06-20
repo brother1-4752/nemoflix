@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import NetflixFont from "../fonts/netflixFont.ttf";
+import NetflixFont from "../fonts/NetflixFont.ttf";
 
 const GlobalStyle = createGlobalStyle`
 
