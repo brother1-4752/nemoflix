@@ -10,7 +10,7 @@ function Header() {
   const { routeTo } = useRouter();
 
   return (
-    <HeaderWrapper className={scrollY < VIEW_HEIGHT ? "" : "hide"}>
+    <HeaderWrapper className={scrollY < VIEW_HEIGHT - 60 ? "" : "hide"}>
       <Typography level={3} style={{ marginLeft: "20px" }}>
         NEMOFLIX
       </Typography>
