@@ -1,7 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import type { LoaderFunction } from "react-router-dom";
 
-// import Authorization from "@/components/templates/Authorization/Authorization";
 import { Home, Login } from "@/components/pages";
 import DetailModal from "@/components/pages/detail/DetailModal";
 
@@ -48,18 +47,5 @@ const routerData: RouterElement[] = [
 ];
 
 const router = createBrowserRouter(routerData);
-
-// const router = createBrowserRouter(
-//   routerData.map((router) => {
-//     return {
-//       path: router.path,
-//       element: (
-//         <Authorization isLogged={"withAuth" in router && router.withAuth}>
-//           {router.element}
-//         </Authorization>
-//       ),
-//     };
-//   })
-// );
 
 export default router;

@@ -1,20 +1,12 @@
-import { Fragment } from "react";
-
 import { Image, Paragraph, Typography } from "@/components/atoms";
-
 import { VIEW_HEIGHT } from "@/constants/windowScreenSizeData";
-import { makeRandomMainPoster } from "@/utils/makeRandomMainPoster";
-import { makeBgPath } from "@/utils/makeBgPath";
 import { Header } from "@/components/organisms";
 
 const TopSectionLayout = () => {
-  const { randomMainPoster } = makeRandomMainPoster();
-  const randomMainPosterData = makeBgPath(randomMainPoster);
-
   return (
-    <Fragment>
+    <>
       <Header />
-      <Image variant="MAIN" url={randomMainPosterData} />
+      <Image variant="MAIN" url={`mainImg3.webp`} />
       <Typography
         level={3}
         style={{
@@ -34,7 +26,7 @@ const TopSectionLayout = () => {
       >
         Feel free to use the new weekly updates at no extra charge!
       </Paragraph>
-    </Fragment>
+    </>
   );
 };
 
